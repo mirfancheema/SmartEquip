@@ -12,6 +12,7 @@ class SmartEquipApp extends HTMLElement {
         </header>
         <main class="main-content">
           <equipment-selector></equipment-selector>
+          <button id="fetch-button" disabled>Fetch</button>
           <camera-view></camera-view>
           <voice-input></voice-input>
           <info-display></info-display>
@@ -22,21 +23,24 @@ class SmartEquipApp extends HTMLElement {
       </div>
     `;
 
-    this.selectedEquipment = null; // Default equipment
+    this.selectedEquipment = null;
     this.infoDisplay = this.shadowRoot.querySelector('info-display');
     this.voiceInput = this.shadowRoot.querySelector('voice-input');
-    this.equipmentSelector = this.shadowRoot.querySelector('equipment-selector');
-    this.shadowRoot.querySelector('camera-view').updateEquipment(this.selectedEquipment);
+    this.fetchButton = this.shadowRoot.querySelector('#fetch-button');
 
-    this.addEventListener('equipment-selected', (event) => {
+    this.shadowRoot.addEventListener('equipment-selected', (event) => {
         this.selectedEquipment = event.detail.equipmentId;
         this.shadowRoot.querySelector('camera-view').updateEquipment(this.selectedEquipment);
+        this.fetchButton.disabled = !this.selectedEquipment;
+        if (!this.selectedEquipment) {
+            this.infoDisplay.clear();
+        }
+    });
+
+    this.fetchButton.addEventListener('click', () => {
         if (this.selectedEquipment) {
             this.infoDisplay.updateContent(knowledgeBase[this.selectedEquipment]);
-            // Automatically expand the Application section
             setTimeout(() => this.infoDisplay.expandCategory('Application'), 100);
-        } else {
-            this.infoDisplay.clear();
         }
     });
 

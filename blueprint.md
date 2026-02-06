@@ -15,11 +15,19 @@ The application is built around four core functions:
 
 ## Design and Features
 
+### Version 7
+
+*   **Fetch Button:** A "Fetch" button is added to the main interface.
+*   **Workflow Change:** Information for the selected equipment is now displayed only after the user clicks the "Fetch" button. The button is disabled until an equipment is selected.
+
+### Version 6
+
+*   **Bug Fix:** Corrected an issue where the equipment selection was not being recognized by the application.
+
 ### Version 5
 
 *   **UI Update:** The "Send" button for voice commands has been renamed to "Record".
 *   **Improved Workflow:** Upon selecting an equipment from the dropdown, the "Application" category is now automatically expanded, presenting the user with immediate, relevant information.
-*   **Contextual Expansion:** Voice commands now expand the relevant category while keeping other categories available.
 
 ### Version 4
 
@@ -31,26 +39,18 @@ The application is built around four core functions:
 
 ### Version 2
 
-The second version of the SmartEquip application includes the following enhancements:
-
 *   **Multi-Equipment Support:** The application now supports multiple pieces of equipment through an expanded knowledge base.
-*   **Equipment Selector:** A dropdown menu has been added to allow users to manually select their equipment.
-*   **Improved UI:** The user interface has been updated to accommodate the equipment selector and improve the user experience on both web and mobile devices.
 
 ### Initial Version
 
 The initial version of the SmartEquip application has been built and includes:
 
-*   **UI/UX:**
-    *   A high-contrast, industrial-grade design suitable for use in demanding environments.
-*   **Core Components:**
-    *   A main application container.
-    *   A simulated camera view for equipment recognition.
-    *   A voice command input field.
+*   **UI/UX:** A high-contrast, industrial-grade design.
+*   **Core Components:** Main container, camera view, voice input.
 
 ## Current Plan
 
-1.  **Update Button Label:** Change the text of the button in the `<voice-input>` component from "Send" to "Record".
-2.  **Modify Application Logic:** Update the main application to expand the "Application" category by default when an equipment is selected.
-3.  **Refactor InfoDisplay:** Modify the `<info-display>` component to handle the expansion of specific categories based on user actions.
-4.  **Test:** Verify the new workflow and UI changes.
+1.  **Add Fetch Button:** Add a disabled "Fetch" button to the main application component.
+2.  **Update Equipment Selection Logic:** Modify the equipment selection handler to enable the "Fetch" button upon selection, instead of automatically displaying data.
+3.  **Implement Fetch Logic:** Create a click handler for the "Fetch" button that retrieves and displays the equipment information.
+4.  **Test:** Verify the new fetch workflow.
