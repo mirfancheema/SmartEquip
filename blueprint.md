@@ -15,6 +15,18 @@ The application is built around four core functions:
 
 ## Design and Features
 
+### Version 9
+
+*   **Visual Redesign:** The application's visual identity has been updated to align with the Imer Group's branding.
+*   **New Color Scheme:** A new color palette has been introduced, featuring a prominent orange accent, dark text, and a light gray background.
+*   **Improved Typography:** Font sizes and weights have been adjusted to improve readability and create a clear visual hierarchy.
+*   **Enhanced Shadows:** Drop shadows have been updated to create a greater sense of depth and to make interactive elements feel more tactile.
+
+### Version 8
+
+*   **Interactive Checklists:** The safety and readiness checklists now include interactive checkboxes, allowing operators to visually confirm the completion of each item.
+*   **Consistent Button Styling:** All buttons now share a consistent design for a more unified user experience.
+
 ### Version 7
 
 *   **Fetch Button:** A "Fetch" button is added to the main interface.
@@ -50,7 +62,6 @@ The initial version of the SmartEquip application has been built and includes:
 
 ## Current Plan
 
-1.  **Add Fetch Button:** Add a disabled "Fetch" button to the main application component.
-2.  **Update Equipment Selection Logic:** Modify the equipment selection handler to enable the "Fetch" button upon selection, instead of automatically displaying data.
-3.  **Implement Fetch Logic:** Create a click handler for the "Fetch" button that retrieves and displays the equipment information.
-4.  **Test:** Verify the new fetch workflow.
+1.  **Update Color Palette:** Change the CSS variables to match the Imer Group's color scheme.
+2.  **Refine Typography:** Adjust font sizes and weights for better readability.
+3.  **Enhance UI Elements:** Improve the styling of buttons, cards, and other interactive components.

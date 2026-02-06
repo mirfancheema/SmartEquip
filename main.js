@@ -253,7 +253,7 @@ class InfoDisplay extends HTMLElement {
             <div class="safety">
                 <h3>${safety.title}</h3>
                 <ul>
-                    ${safety.points.map(point => `<li>${point}</li>`).join('')}
+                    ${safety.points.map(point => `<li><input type="checkbox">${point}</li>`).join('')}
                 </ul>
             </div>
         `;
@@ -263,7 +263,7 @@ class InfoDisplay extends HTMLElement {
         return `
             <h3>${checklist.title}</h3>
             <ul>
-                ${checklist.points.map(point => `<li>${point}</li>`).join('')}
+                ${checklist.points.map(point => `<li><input type="checkbox">${point}</li>`).join('')}
             </ul>
         `;
     }

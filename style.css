@@ -1,22 +1,25 @@
-/* SmartEquip - Industrial Grade CSS */
+/* SmartEquip - Imer Group Inspired Design */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --primary-color: #ff6f00; /* Amber */
-    --secondary-color: #263238; /* Blue Grey */
-    --background-color: #eceff1; /* Blue Grey Lighten-5 */
-    --text-color: #212121; /* Grey Darken-4 */
+    --primary-color: #f37021; /* Imer Orange */
+    --secondary-color: #231f20; /* Imer Dark Grey/Black */
+    --background-color: #f4f4f4; /* Light Grey */
+    --text-color: #231f20;
     --light-text-color: #ffffff;
-    --danger-color: #d32f2f; /* Red Darken-2 */
-    --success-color: #388e3c; /* Green Darken-2 */
+    --danger-color: #d32f2f;
+    --success-color: #388e3c;
     --font-family: 'Roboto', sans-serif;
     --base-font-size: 16px;
-    --h1-font-size: 2rem;
-    --h2-font-size: 1.75rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
-    --container-padding: 15px;
-    --card-padding: 15px;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --container-padding: 20px;
+    --card-padding: 20px;
+    --border-radius: 4px;
+    --box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    --input-shadow: 0 2px 4px rgba(0,0,0,0.05) inset;
 }
 
 body {
@@ -25,37 +28,38 @@ body {
     color: var(--text-color);
     margin: 0;
     font-size: var(--base-font-size);
+    line-height: 1.6;
 }
 
 smart-equip-app {
     display: block;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 40px auto;
     background-color: #ffffff;
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
 
 .app-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 .header {
-    background-color: var(--secondary-color);
-    color: var(--light-text-color);
+    background-color: var(--light-text-color);
+    color: var(--secondary-color);
     padding: var(--container-padding);
-    text-align: center;
-    border-bottom: 4px solid var(--primary-color);
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .header h1 {
     margin: 0;
     font-size: var(--h1-font-size);
+    font-weight: 700;
 }
 
 .main-content {
-    flex-grow: 1;
     padding: var(--container-padding);
 }
 
@@ -64,21 +68,31 @@ smart-equip-app {
     color: var(--light-text-color);
     padding: var(--container-padding);
     text-align: center;
+    font-size: 0.9rem;
 }
 
 .equipment-selector, .camera-view {
-    border: 2px dashed var(--secondary-color);
+    border: 1px solid #e0e0e0;
     border-radius: var(--border-radius);
     padding: var(--card-padding);
     margin-bottom: var(--container-padding);
-    background-color: #f5f5f5;
+    background-color: #ffffff;
+}
+
+.equipment-selector label {
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .equipment-selector select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
     border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: var(--input-shadow);
 }
 
 .voice-input {
@@ -93,36 +107,50 @@ smart-equip-app {
     border: 1px solid #ccc;
     border-radius: var(--border-radius);
     font-size: var(--base-font-size);
+    box-shadow: var(--input-shadow);
 }
 
-.voice-input button {
+button, .voice-input button {
     background-color: var(--primary-color);
     color: var(--light-text-color);
     border: none;
     padding: var(--card-padding);
     border-radius: var(--border-radius);
     font-size: var(--base-font-size);
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(243, 112, 33, 0.3);
 }
 
-.voice-input button:hover {
-    background-color: #e65100; /* Amber Darken-4 */
+button:hover, .voice-input button:hover {
+    background-color: #d15b15;
+    box-shadow: 0 6px 12px rgba(243, 112, 33, 0.4);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
 .info-display .category {
-    border: 1px solid #ddd;
+    border: 1px solid #e0e0e0;
     border-radius: var(--border-radius);
     margin-bottom: var(--container-padding);
+    background-color: #fff;
     overflow: hidden;
 }
 
 .info-display .category-header {
-    background-color: var(--secondary-color);
-    color: var(--light-text-color);
+    background-color: #f9f9f9;
+    color: var(--secondary-color);
     padding: var(--card-padding);
     cursor: pointer;
     font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .info-display .category-content {
@@ -130,10 +158,9 @@ smart-equip-app {
 }
 
 .info-display .safety {
-    border: 2px solid var(--danger-color);
-    background-color: #ffebee; /* Red Lighten-5 */
+    border-left: 4px solid var(--danger-color);
+    background-color: #fff8f8;
     padding: var(--card-padding);
-    border-radius: var(--border-radius);
     margin-bottom: var(--container-padding);
 }
 
@@ -143,16 +170,36 @@ smart-equip-app {
 }
 
 .info-display ul, .info-display ol {
-    list-style-position: inside;
+    list-style-type: none;
     padding-left: 0;
 }
 
 .info-display li {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: var(--card-padding);
-    margin-bottom: 10px;
-    border-radius: var(--border-radius);
+    background-color: transparent;
+    border: none;
+    padding: 10px 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-display li:last-child {
+    border-bottom: none;
+}
+
+.info-display li input[type="checkbox"] {
+    margin-right: 15px;
+    min-width: 18px;
+    min-height: 18px;
+    accent-color: var(--primary-color);
+}
+
+.info-display h3 {
+    font-size: var(--h3-font-size);
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .info-display .video-container {
@@ -161,7 +208,6 @@ smart-equip-app {
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    background: #000;
     border-radius: var(--border-radius);
 }
 
@@ -175,14 +221,16 @@ smart-equip-app {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    :root {
-        --base-font-size: 14px;
-        --h1-font-size: 1.8rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.1rem;
+    smart-equip-app {
+        margin: 0;
+        border-radius: 0;
     }
 
-    .app-container {
-        min-height: 100%;
+    .main-content, .header, .footer {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
     }
 }
