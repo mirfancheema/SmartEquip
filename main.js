@@ -1,6 +1,6 @@
 import { knowledgeBase } from './knowledgeBase.js';
 
-class SmartEquipApp extends HTMLElement {
+class Snap2KnowApp extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -8,7 +8,7 @@ class SmartEquipApp extends HTMLElement {
       <link rel="stylesheet" href="style.css">
       <div class="app-container">
         <header class="header">
-          <h1>SmartEquip</h1>
+          <h1>Snap2Know</h1>
         </header>
         <main class="main-content">
           <equipment-selector></equipment-selector>
@@ -18,7 +18,7 @@ class SmartEquipApp extends HTMLElement {
           <info-display></info-display>
         </main>
         <footer class="footer">
-          <p>&copy; 2024 SmartEquip Inc.</p>
+          <p>&copy; 2024 Snap2Know Inc.</p>
         </footer>
       </div>
     `;
@@ -320,7 +320,7 @@ class InfoDisplay extends HTMLElement {
     }
 }
 
-customElements.define('smart-equip-app', SmartEquipApp);
+customElements.define('snap-2-know-app', Snap2KnowApp);
 customElements.define('equipment-selector', EquipmentSelector);
 customElements.define('camera-view', CameraView);
 customElements.define('voice-input', VoiceInput);

@@ -1,4 +1,4 @@
-/* SmartEquip - Imer Group Inspired Design */
+/* Snap2Know - Imer Group Inspired Design */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
@@ -31,7 +31,7 @@ body {
     line-height: 1.6;
 }
 
-smart-equip-app {
+snap-2-know-app {
     display: block;
     max-width: 900px;
     margin: 40px auto;
@@ -221,7 +221,7 @@ button:disabled {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    smart-equip-app {
+    snap-2-know-app {
         margin: 0;
         border-radius: 0;
     }

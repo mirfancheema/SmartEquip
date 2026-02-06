@@ -1,8 +1,8 @@
-# SmartEquip Application Blueprint
+# Snap2Know Application Blueprint
 
 ## Overview
 
-SmartEquip is a mission-critical mobile application for field operators working with industrial equipment. It provides instant, authoritative, manufacturer-approved information through photo-based equipment recognition or short, intent-based voice commands. The system prioritizes safety, correctness, and traceability.
+Snap2Know is a mission-critical mobile application for field operators working with industrial equipment. It provides instant, authoritative, manufacturer-approved information through photo-based equipment recognition or short, intent-based voice commands. The system prioritizes safety, correctness, and traceability.
 
 ## Core Functions
 
@@ -14,6 +14,10 @@ The application is built around four core functions:
 4.  **Tracking of Equipment:** Maintains equipment context and operational history.
 
 ## Design and Features
+
+### Version 10
+
+*   **Application Renamed:** The application has been renamed from "SmartEquip" to "Snap2Know".
 
 ### Version 9
 
@@ -55,13 +59,11 @@ The application is built around four core functions:
 
 ### Initial Version
 
-The initial version of the SmartEquip application has been built and includes:
+The initial version of the Snap2Know application has been built and includes:
 
 *   **UI/UX:** A high-contrast, industrial-grade design.
 *   **Core Components:** Main container, camera view, voice input.
 
 ## Current Plan
 
-1.  **Update Color Palette:** Change the CSS variables to match the Imer Group's color scheme.
-2.  **Refine Typography:** Adjust font sizes and weights for better readability.
-3.  **Enhance UI Elements:** Improve the styling of buttons, cards, and other interactive components.
+1.  **Update Application Name:** Change all instances of "SmartEquip" to "Snap2Know" in the application's files.
