@@ -15,6 +15,10 @@ The application is built around four core functions:
 
 ## Design and Features
 
+### Version 17
+
+*   **Google Analytics Integration:** Added Google Analytics tracking to the website to monitor user engagement.
+
 ### Version 16
 
 *   **Thematic Redesign:** The application's theme has been updated to be in line with popular construction equipment company websites, using a yellow, black, and grey color scheme.
@@ -91,5 +95,4 @@ The initial version of the Snap2Know application has been built and includes:
 
 ## Current Plan
 
-1.  **Update Theme:** Update the website's theme to be more in line with popular construction equipment company websites.
-2.  **Add Logos:** Add relevant logos to each section to make the website more attractive.
+1.  **Add Google Analytics:** Add the Google Analytics tag to every HTML page.
