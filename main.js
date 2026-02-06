@@ -171,6 +171,19 @@ class InfoDisplay extends HTMLElement {
                 <h2>Please select an equipment to begin.</h2>
             </div>
         `;
+
+        this.icons = {
+            APPLICATION: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>',
+            MAINTENANCE: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>',
+            TROUBLESHOOT: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>',
+            SAFETY: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>',
+            CHECKLIST: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="15" x2="15" y2="15"></line><line x1="9" y1="11" x2="15" y2="11"></line></svg>',
+            GUIDE: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>',
+            SCHEDULE: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>',
+            PARTS: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>',
+            HISTORY: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M12 7v5l3 3"></path></svg>',
+            VIDEOS: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>'
+        };
         
         this.shadowRoot.addEventListener('click', (event) => {
             const header = event.target.closest('.category-header');
@@ -209,7 +222,8 @@ class InfoDisplay extends HTMLElement {
     expandCategory(categoryTitle) {
         const headers = this.shadowRoot.querySelectorAll('.category-header');
         headers.forEach(header => {
-            if (header.textContent === categoryTitle) {
+            const titleNode = Array.from(header.childNodes).find(node => node.nodeType === Node.TEXT_NODE);
+            if (titleNode && titleNode.textContent.trim() === categoryTitle) {
                 const content = header.nextElementSibling;
                 content.style.display = 'block';
             }
@@ -217,9 +231,13 @@ class InfoDisplay extends HTMLElement {
     }
 
     renderCategory(title, content) {
+        let icon = '';
+        if (title === 'Application') icon = this.icons.APPLICATION;
+        if (title === 'Maintenance') icon = this.icons.MAINTENANCE;
+        if (title === 'Troubleshoot') icon = this.icons.TROUBLESHOOT;
         return `
             <div class="category">
-                <div class="category-header">${title}</div>
+                <div class="category-header">${icon} ${title}</div>
                 <div class="category-content" style="display: none;">${content}</div>
             </div>
         `;
@@ -253,7 +271,7 @@ class InfoDisplay extends HTMLElement {
     renderSafety(safety) {
         return `
             <div class="safety">
-                <h3>${safety.title}</h3>
+                <h3>${this.icons.SAFETY} ${safety.title}</h3>
                 <ul>
                     ${safety.points.map(point => `<li><input type="checkbox">${point}</li>`).join('')}
                 </ul>
@@ -263,7 +281,7 @@ class InfoDisplay extends HTMLElement {
 
     renderChecklist(checklist) {
         return `
-            <h3>${checklist.title}</h3>
+            <h3>${this.icons.CHECKLIST} ${checklist.title}</h3>
             <ul>
                 ${checklist.points.map(point => `<li><input type="checkbox">${point}</li>`).join('')}
             </ul>
@@ -272,7 +290,7 @@ class InfoDisplay extends HTMLElement {
 
     renderQuickStart(guide) {
         return `
-            <h3>${guide.title}</h3>
+            <h3>${this.icons.GUIDE} ${guide.title}</h3>
             <ol>
                 ${guide.steps.map(step => `<li>${step}</li>`).join('')}
             </ol>
@@ -281,7 +299,7 @@ class InfoDisplay extends HTMLElement {
     
     renderSchedule(schedule) {
         return `
-            <h3>${schedule.title}</h3>
+            <h3>${this.icons.SCHEDULE} ${schedule.title}</h3>
             <ul>
                 ${schedule.tasks.map(task => `<li>${task}</li>`).join('')}
             </ul>
@@ -290,7 +308,7 @@ class InfoDisplay extends HTMLElement {
 
     renderParts(parts) {
         return `
-            <h3>${parts.title}</h3>
+            <h3>${this.icons.PARTS} ${parts.title}</h3>
             <ul>
                 ${parts.list.map(part => `<li>${part}</li>`).join('')}
             </ul>
@@ -299,7 +317,7 @@ class InfoDisplay extends HTMLElement {
 
     renderMaintenanceHistory(history) {
         return `
-            <h3>${history.title}</h3>
+            <h3>${this.icons.HISTORY} ${history.title}</h3>
             <table>
                 <thead>
                     <tr>
@@ -335,7 +353,7 @@ class InfoDisplay extends HTMLElement {
 
     renderVideos(videos) {
         return `
-            <h3>Instructional Videos</h3>
+            <h3>${this.icons.VIDEOS} ${videos.title}</h3>
             ${videos.map(video => `
                 <h4>${video.title}</h4>
                 <div class="video-container">

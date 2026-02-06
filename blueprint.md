@@ -15,6 +15,11 @@ The application is built around four core functions:
 
 ## Design and Features
 
+### Version 16
+
+*   **Thematic Redesign:** The application's theme has been updated to be in line with popular construction equipment company websites, using a yellow, black, and grey color scheme.
+*   **Iconography:** Relevant logos have been added to each section to make the website more attractive and intuitive.
+
 ### Version 15
 
 *   **Checkbox Styling:** The color of the checkboxes has been updated to provide clearer visual feedback. Unchecked boxes are now red, and checked boxes are green.
@@ -86,4 +91,5 @@ The initial version of the Snap2Know application has been built and includes:
 
 ## Current Plan
 
-1.  **Update Checkbox Colors:** Change the checkbox color to red when unchecked and green when checked.
+1.  **Update Theme:** Update the website's theme to be more in line with popular construction equipment company websites.
+2.  **Add Logos:** Add relevant logos to each section to make the website more attractive.

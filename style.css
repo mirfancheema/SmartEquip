@@ -1,24 +1,25 @@
-/* Snap2Know - Imer Group Inspired Design */
+/* Caterpillar Inspired Theme */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Oswald:wght@500;700&display=swap');
 
 :root {
-    --primary-color: #f37021; /* Imer Orange */
-    --secondary-color: #231f20; /* Imer Dark Grey/Black */
-    --background-color: #f4f4f4; /* Light Grey */
-    --text-color: #231f20;
+    --primary-color: #FFD700; /* Caterpillar Yellow */
+    --secondary-color: #000000; /* Black */
+    --background-color: #F5F5F5; /* Light Grey */
+    --text-color: #1a1a1a;
     --light-text-color: #ffffff;
     --danger-color: #d32f2f;
     --success-color: #388e3c;
-    --font-family: 'Roboto', sans-serif;
+    --font-family: 'Roboto Condensed', sans-serif;
+    --header-font-family: 'Oswald', sans-serif;
     --base-font-size: 16px;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.75rem;
     --h3-font-size: 1.25rem;
     --container-padding: 20px;
     --card-padding: 20px;
     --border-radius: 4px;
-    --box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+    --box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.12);
     --input-shadow: 0 2px 4px rgba(0,0,0,0.05) inset;
 }
 
@@ -46,17 +47,18 @@ snap-2-know-app {
 }
 
 .header {
-    background-color: var(--light-text-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: var(--container-padding);
     text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 5px solid var(--primary-color);
     display: flex;
     align-items: center;
+    font-family: var(--header-font-family);
 }
 
 .header .logo {
-    height: 200px;
+    height: 50px;
     margin-right: 15px;
 }
 
@@ -65,6 +67,7 @@ snap-2-know-app {
     margin: 0;
     font-size: var(--h1-font-size);
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .main-content {
@@ -77,6 +80,7 @@ snap-2-know-app {
     padding: var(--container-padding);
     text-align: center;
     font-size: 0.9rem;
+    border-top: 5px solid var(--primary-color);
 }
 
 .equipment-selector, .camera-view {
@@ -88,15 +92,17 @@ snap-2-know-app {
 }
 
 .equipment-selector label {
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 10px;
     display: block;
+    font-family: var(--header-font-family);
+    text-transform: uppercase;
 }
 
 .equipment-selector select {
     width: 100%;
     padding: 12px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: var(--border-radius);
     border: 1px solid #ccc;
     background-color: #fff;
@@ -120,20 +126,22 @@ snap-2-know-app {
 
 button, .voice-input button {
     background-color: var(--primary-color);
-    color: var(--light-text-color);
+    color: var(--secondary-color);
     border: none;
     padding: var(--card-padding);
     border-radius: var(--border-radius);
     font-size: var(--base-font-size);
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 10px rgba(243, 112, 33, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: var(--header-font-family);
+    text-transform: uppercase;
 }
 
 button:hover, .voice-input button:hover {
-    background-color: #d15b15;
-    box-shadow: 0 6px 12px rgba(243, 112, 33, 0.4);
+    background-color: #e6c300;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 button:disabled {
@@ -152,13 +160,22 @@ button:disabled {
 }
 
 .info-display .category-header {
-    background-color: #f9f9f9;
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: var(--card-padding);
     cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 500;
-    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    font-family: var(--header-font-family);
+    text-transform: uppercase;
+}
+
+.info-display .category-header svg {
+    margin-right: 15px;
+    stroke: var(--primary-color);
 }
 
 .info-display .category-content {
@@ -175,6 +192,13 @@ button:disabled {
 .info-display .safety h3 {
     color: var(--danger-color);
     margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.info-display .safety h3 svg {
+    margin-right: 10px;
+    stroke: var(--danger-color);
 }
 
 .info-display ul, .info-display ol {
@@ -209,9 +233,18 @@ button:disabled {
 
 .info-display h3 {
     font-size: var(--h3-font-size);
-    font-weight: 500;
+    font-weight: 700;
     margin-top: 0;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-family: var(--header-font-family);
+    text-transform: uppercase;
+}
+
+.info-display h3 svg {
+    margin-right: 10px;
+    stroke: var(--text-color);
 }
 
 .info-display .video-container {
@@ -245,7 +278,9 @@ button:disabled {
 
 .info-display th {
     background-color: #f9f9f9;
-    font-weight: 500;
+    font-weight: 700;
+    font-family: var(--header-font-family);
+    text-transform: uppercase;
 }
 
 
