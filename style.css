@@ -1,1 +1,188 @@
-/* Add styles here */
+/* SmartEquip - Industrial Grade CSS */
+
+:root {
+    --primary-color: #ff6f00; /* Amber */
+    --secondary-color: #263238; /* Blue Grey */
+    --background-color: #eceff1; /* Blue Grey Lighten-5 */
+    --text-color: #212121; /* Grey Darken-4 */
+    --light-text-color: #ffffff;
+    --danger-color: #d32f2f; /* Red Darken-2 */
+    --success-color: #388e3c; /* Green Darken-2 */
+    --font-family: 'Roboto', sans-serif;
+    --base-font-size: 16px;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --container-padding: 15px;
+    --card-padding: 15px;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-size: var(--base-font-size);
+}
+
+smart-equip-app {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: var(--box-shadow);
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: var(--container-padding);
+    text-align: center;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: var(--h1-font-size);
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: var(--container-padding);
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: var(--container-padding);
+    text-align: center;
+}
+
+.equipment-selector, .camera-view {
+    border: 2px dashed var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    margin-bottom: var(--container-padding);
+    background-color: #f5f5f5;
+}
+
+.equipment-selector select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.voice-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: var(--container-padding);
+}
+
+.voice-input input {
+    flex-grow: 1;
+    padding: var(--card-padding);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: var(--base-font-size);
+}
+
+.voice-input button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    font-size: var(--base-font-size);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.voice-input button:hover {
+    background-color: #e65100; /* Amber Darken-4 */
+}
+
+.info-display .category {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--container-padding);
+    overflow: hidden;
+}
+
+.info-display .category-header {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: var(--card-padding);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.info-display .category-content {
+    padding: var(--card-padding);
+}
+
+.info-display .safety {
+    border: 2px solid var(--danger-color);
+    background-color: #ffebee; /* Red Lighten-5 */
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--container-padding);
+}
+
+.info-display .safety h3 {
+    color: var(--danger-color);
+    margin-top: 0;
+}
+
+.info-display ul, .info-display ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.info-display li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: var(--card-padding);
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+}
+
+.info-display .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: var(--border-radius);
+}
+
+.info-display .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    :root {
+        --base-font-size: 14px;
+        --h1-font-size: 1.8rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.1rem;
+    }
+
+    .app-container {
+        min-height: 100%;
+    }
+}
