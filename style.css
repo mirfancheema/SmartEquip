@@ -219,6 +219,24 @@ button:disabled {
     height: 100%;
 }
 
+.info-display table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.info-display th, .info-display td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-display th {
+    background-color: #f9f9f9;
+    font-weight: 500;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
     snap-2-know-app {

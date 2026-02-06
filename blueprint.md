@@ -15,6 +15,10 @@ The application is built around four core functions:
 
 ## Design and Features
 
+### Version 11
+
+*   **Maintenance History:** A "Maintenance History" section has been added under the "Maintenance" category. This section displays a table of past maintenance records, including the date, a description of the work performed, and the name of the technician.
+
 ### Version 10
 
 *   **Application Renamed:** The application has been renamed from "SmartEquip" to "Snap2Know".
@@ -66,4 +70,4 @@ The initial version of the Snap2Know application has been built and includes:
 
 ## Current Plan
 
-1.  **Update Application Name:** Change all instances of "SmartEquip" to "Snap2Know" in the application's files.
+1.  **Add Maintenance History:** Add a section for maintenance history under the Maintenance category and populate it with mock data.

@@ -64,6 +64,26 @@ export const knowledgeBase = {
                     "Main Seal Kit: MSK-980",
                     "Control Valve: CV-330"
                 ]
+            },
+            "maintenance_history": {
+                "title": "Maintenance History",
+                "records": [
+                    {
+                        "date": "2024-07-15",
+                        "description": "Replaced hydraulic fluid and filters.",
+                        "technician": "John Doe"
+                    },
+                    {
+                        "date": "2024-06-20",
+                        "description": "Lubricated all moving parts.",
+                        "technician": "Jane Smith"
+                    },
+                    {
+                        "date": "2024-05-30",
+                        "description": "Inspected and cleaned filters.",
+                        "technician": "John Doe"
+                    }
+                ]
             }
         },
         "troubleshoot": {
@@ -149,6 +169,26 @@ export const knowledgeBase = {
                     "After each use: Clean the contact tip and nozzle.",
                     "Monthly: Inspect all cables and hoses for wear or damage.",
                     "Every 6 months: Clean the interior of the welder to remove dust and debris."
+                ]
+            },
+            "maintenance_history": {
+                "title": "Maintenance History",
+                "records": [
+                    {
+                        "date": "2024-07-10",
+                        "description": "Cleaned the interior of the welder.",
+                        "technician": "Peter Jones"
+                    },
+                    {
+                        "date": "2024-06-15",
+                        "description": "Inspected all cables and hoses.",
+                        "technician": "Sarah Miller"
+                    },
+                    {
+                        "date": "2024-05-20",
+                        "description": "Cleaned the contact tip and nozzle.",
+                        "technician": "Peter Jones"
+                    }
                 ]
             }
         },

@@ -238,6 +238,7 @@ class InfoDisplay extends HTMLElement {
         if (maintenance.safety) content += this.renderSafety(maintenance.safety);
         if (maintenance.schedule) content += this.renderSchedule(maintenance.schedule);
         if (maintenance.parts) content += this.renderParts(maintenance.parts);
+        if (maintenance.maintenance_history) content += this.renderMaintenanceHistory(maintenance.maintenance_history);
         return content;
     }
 
@@ -292,6 +293,30 @@ class InfoDisplay extends HTMLElement {
             <ul>
                 ${parts.list.map(part => `<li>${part}</li>`).join('')}
             </ul>
+        `;
+    }
+
+    renderMaintenanceHistory(history) {
+        return `
+            <h3>${history.title}</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Technician</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${history.records.map(record => `
+                        <tr>
+                            <td>${record.date}</td>
+                            <td>${record.description}</td>
+                            <td>${record.technician}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
         `;
     }
 
