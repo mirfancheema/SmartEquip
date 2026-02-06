@@ -200,7 +200,11 @@ button:disabled {
     margin-right: 15px;
     min-width: 18px;
     min-height: 18px;
-    accent-color: var(--primary-color);
+    accent-color: var(--danger-color);
+}
+
+.info-display li input[type="checkbox"]:checked {
+    accent-color: var(--success-color);
 }
 
 .info-display h3 {

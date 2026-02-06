@@ -15,6 +15,10 @@ The application is built around four core functions:
 
 ## Design and Features
 
+### Version 15
+
+*   **Checkbox Styling:** The color of the checkboxes has been updated to provide clearer visual feedback. Unchecked boxes are now red, and checked boxes are green.
+
 ### Version 14
 
 *   **Logo Resized:** The application logo has been doubled in size for better visibility.
@@ -78,8 +82,8 @@ The application is built around four core functions:
 The initial version of the Snap2Know application has been built and includes:
 
 *   **UI/UX:** A high-contrast, industrial-grade design.
-*   **Core Components:** Main container, camera view, voice input.
+*   **Core Components:** Main container, a camera view, and voice input.
 
 ## Current Plan
 
-1.  **Double Logo Size:** Double the size of the application logo.
+1.  **Update Checkbox Colors:** Change the checkbox color to red when unchecked and green when checked.
