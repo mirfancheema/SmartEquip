@@ -51,7 +51,15 @@ snap-2-know-app {
     padding: var(--container-padding);
     text-align: left;
     border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
 }
+
+.header .logo {
+    height: 200px;
+    margin-right: 15px;
+}
+
 
 .header h1 {
     margin: 0;

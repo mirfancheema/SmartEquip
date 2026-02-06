@@ -8,6 +8,7 @@ class Snap2KnowApp extends HTMLElement {
       <link rel="stylesheet" href="style.css">
       <div class="app-container">
         <header class="header">
+          <img src="images/Gemini_Generated_Image_2eo7912eo7912eo7.png" alt="Snap2Know Logo" class="logo">
           <h1>Snap2Know</h1>
         </header>
         <main class="main-content">

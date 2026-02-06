@@ -15,6 +15,18 @@ The application is built around four core functions:
 
 ## Design and Features
 
+### Version 14
+
+*   **Logo Resized:** The application logo has been doubled in size for better visibility.
+
+### Version 13
+
+*   **Logo Resized:** The application logo has been increased in size by 2.5 times for better visibility.
+
+### Version 12
+
+*   **Application Logo:** The Snap2Know logo has been added to the application header, appearing to the left of the title.
+
 ### Version 11
 
 *   **Maintenance History:** A "Maintenance History" section has been added under the "Maintenance" category. This section displays a table of past maintenance records, including the date, a description of the work performed, and the name of the technician.
@@ -70,4 +82,4 @@ The initial version of the Snap2Know application has been built and includes:
 
 ## Current Plan
 
-1.  **Add Maintenance History:** Add a section for maintenance history under the Maintenance category and populate it with mock data.
+1.  **Double Logo Size:** Double the size of the application logo.
